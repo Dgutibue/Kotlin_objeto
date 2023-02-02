@@ -1,6 +1,13 @@
 fun main(args: Array<String>) {
-    var tiempo = Reloj2()
-    tiempo.hora = Hora(0,45,33)
-    tiempo.menu()
+    val dia = Dia()
+    dia.estado = 'r'
+    println(dia.estado)
+    println("***************************")
+    val dia2 = Dia(15,30,'p')
+    println(dia2.estado)
+    println("**************************")
+    dia2.mostrar_prediccion()
+    println("**************************")
+    dia2.temperaturaActual()
 }
 
