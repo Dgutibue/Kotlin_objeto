@@ -1,4 +1,4 @@
-package Tiempo
+
 
 class Hora(hora: Int, minuto: Int, segundo: Int) {
     var horas: Int = hora
@@ -37,6 +37,7 @@ class Hora(hora: Int, minuto: Int, segundo: Int) {
     fun mostrar24(){
         if(this.horas > 23)
             this.horas = 0
+        else this.horas = this.horas
         println("Son las $horas horas, $minutos minutos con $segundos segundos")
     }
     fun mostrar12(){
