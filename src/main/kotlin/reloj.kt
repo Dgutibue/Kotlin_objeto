@@ -20,7 +20,7 @@ fun menu(){
     println("****************")
     println("Menú de opciones")
     println("****************")
-    println("Elija la opción deseada\n1.Hora:Minutos:segundos\n2.Hora:Minutos\n3.Hora")
+    println("Elija la opción deseada\n1.Tiempo.Hora:Minutos:segundos\n2.Tiempo.Hora:Minutos\n3.Tiempo.Hora")
 }
 fun main(args: Array<String>) {
     menu()

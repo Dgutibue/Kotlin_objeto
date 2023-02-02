@@ -1,3 +1,5 @@
+package Tiempo
+
 class Hora(hora: Int, minuto: Int, segundo: Int) {
     var horas: Int = hora
         get() {

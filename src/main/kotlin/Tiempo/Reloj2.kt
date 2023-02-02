@@ -1,3 +1,5 @@
+package Tiempo
+
 class Reloj2 {
     var hora = Hora()
     fun menu(){
@@ -31,16 +33,16 @@ class Reloj2 {
 }
 /*
 fun main(args: Array<String>) {
-    var tiempo = Reloj2()
-    tiempo.hora = Hora(13,45,33)
+    var tiempo = Tiempo.Reloj2()
+    tiempo.hora = Tiempo.Hora(13,45,33)
     tiempo.menu()
 }
  */
 
 /*
 fun main(args: Array<String>) {
-    var tiempo = Hora()
-    var tiempo2 = Hora(23, 54, 60)
+    var tiempo = Tiempo.Hora()
+    var tiempo2 = Tiempo.Hora(23, 54, 60)
     tiempo.horas = 23
     tiempo.minutos = 75
     tiempo.segundos = 80

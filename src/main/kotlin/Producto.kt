@@ -5,7 +5,7 @@ class Producto (){
             field = value
             if(field == ""){
                 do {
-                    println("Producto")
+                    println("Error, Introduzca el nombre del producto")
                     field = readln()
                 }while(field == "")
             }
@@ -20,7 +20,7 @@ class Producto (){
             field = value
             if(field <= 0.0){
                 do {
-                    println("Precio")
+                    println("Error, Introduzca el precio del producto")
                     field = readln().toDouble()
                 }while(field <= 0.0)
             }
@@ -31,9 +31,9 @@ class Producto (){
         this.precio = precioC2_
         if(this.nombre == "" || this.precio <= 0.0){
             do {
-                println("Producto")
+                println("Error, Introduzca el nombre del producto")
                 this.nombre = readln()
-                println("Precio")
+                println("Error, Introduzca el precio del producto")
                 this.precio = readln().toDouble()
             }while(this.nombre == "" || this.precio <= 0)
         }
