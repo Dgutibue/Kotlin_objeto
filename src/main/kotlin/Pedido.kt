@@ -33,6 +33,13 @@ class Pedido {
             else -> println("Error, introduzca un número del 1 al 3")
         }
     }
+    fun total(){
+        var total = 0.0
+        for(i in pedido){
+            total += i.precio
+        }
+        println("La suma total de los productos es: $total€")
+    }
     fun mostrarPedido(){
         for(i in pedido){
             i.resumen()
