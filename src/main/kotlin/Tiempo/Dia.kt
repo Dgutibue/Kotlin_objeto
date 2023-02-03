@@ -1,9 +1,9 @@
 class Dia(){
-    var min: Int = 0
+    var min: Int = 25
         get() {
             return field
         }
-    var max: Int = 0
+    var max: Int =10
         get() {
             return field
         }
@@ -14,10 +14,12 @@ class Dia(){
         set(value) {
             val Lista = listOf<Char>('s','n','l')
             field = value
-            do{
-                println("Caracter erróneo, ingrese (s, n o l)")
-                field = readln()!![0]
-            }while(field !in Lista)
+            if(field !in Lista){
+                do{
+                    println("Caracter erróneo, ingrese (s, n o l)")
+                    field = readln()!![0].lowercaseChar()
+                }while(field !in Lista)
+            }
         }
     constructor(min2: Int, max2: Int, estado2: Char):this() {
         min = min2
@@ -32,16 +34,20 @@ class Dia(){
             'n' -> es = "nublado"
             'l' -> es = "lluvioso"
         }
-        println("Se espera un día $es con temperatura máxima $max y con unas mínimas de $min")
+        println("Se espera un día $es con temperatura máxima de $max grados y con unas mínimas de $min grados")
     }
     fun temperaturaActual(){
         println("Ingrese la temperatura actual")
         var temperatura = readln().toInt()
         if(temperatura > max){
             max = temperatura
-        }else if(temperatura > min){
+            println("Se ha superado la temperatura máxima alcanzando los $max grados")
+        }else if(temperatura > min && temperatura < max){
             min = temperatura
+            println("Se ha superado la temperatura mínima alcanzando los $min grados, aunque se espera alcanzar los $max")
+        }else {
+            min = temperatura
+            println("Hace un día anormalmente frío con una temperatura de $min grados")
         }
-        println("Actualmente la temperatura máxima es $max y la mínima es $min")
     }
 }
